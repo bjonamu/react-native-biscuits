@@ -18,7 +18,7 @@ const KeyboardAvoidingScrollView = ({ children, keyboardDismissMode, keyboardSho
   )
 }
 
-KeyboardAvoidingScrollView.defaultprops = {
+KeyboardAvoidingScrollView.defaultProps = {
   keyboardDismissMode: 'none',
   keyboardShouldPersistTaps: 'always'
 }
