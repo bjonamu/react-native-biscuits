@@ -1,6 +1,6 @@
 {
   "name": "react-native-biscuits",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Tasty React Native biscuits (best practice snippets)",
   "main": "index.js",
   "scripts": {
