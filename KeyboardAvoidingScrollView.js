@@ -1,15 +1,26 @@
 import React from 'react'
 import { KeyboardAvoidingView, Platform, ScrollView } from 'react-native'
 
-export default ({ children }) => {
+const KeyboardAvoidingScrollView = ({ children, keyboardDismissMode, keyboardShouldPersistTaps }) => {
   return (
     <KeyboardAvoidingView
-      style={{flex: 1}}
+      style={{ flex: 1 }}
       behavior={(Platform.OS === 'ios') ? 'padding' : null}
     >
-      <ScrollView keyboardShouldPersistTaps='always'>
+      <ScrollView
+        contentContainerStyle={{ flexGrow: 1 }}
+        keyboardDismissMode={keyboardDismissMode}
+        keyboardShouldPersistTaps={keyboardShouldPersistTaps}
+      >
         {children}
       </ScrollView>
     </KeyboardAvoidingView>
   )
 }
+
+KeyboardAvoidingScrollView.defaultprops = {
+  keyboardDismissMode: 'none',
+  keyboardShouldPersistTaps: 'always'
+}
+
+export default KeyboardAvoidingScrollView
